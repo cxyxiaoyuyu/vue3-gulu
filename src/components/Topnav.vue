@@ -31,12 +31,17 @@ export default {
 
 <style lang="scss">
 .topNav {
+  background: pink;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items:center;
   padding: 15px 20px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
   .menu ul{
       display: flex;
       >li {
