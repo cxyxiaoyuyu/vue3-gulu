@@ -4,14 +4,16 @@
     <aside v-if="asideVisible">
       <h2>组件列表</h2>
       <ul>
-        <li><roter-link to="/doc/button">Button组件</roter-link></li>
-        <li><roter-link to="/doc/switch">Switch组件</roter-link></li>
-        <li><roter-link to="/doc/slide">Slide滑块</roter-link></li>
-        <li><roter-link to="/doc/dialog">Dialog组件</roter-link></li>
-        <li><roter-link to="/doc/tab">Tabs组件</roter-link></li>
+        <li><router-link to="/doc/button">Button组件</router-link></li>
+        <li><router-link to="/doc/switch">Switch组件</router-link></li>
+        <li><router-link to="/doc/slide">Slide滑块</router-link></li>
+        <li><router-link to="/doc/dialog">Dialog组件</router-link></li>
+        <li><router-link to="/doc/tabs">Tabs组件</router-link></li>
       </ul>
     </aside>
-    <main>主内容</main>
+    <main>
+      <router-view></router-view>
+    </main>
   </div>
  
 </template>
