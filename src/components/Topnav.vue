@@ -1,12 +1,16 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="toggleAside">Logo</div>
+    <div class="logo">
+      <router-link to="/">Logo</router-link>
+    </div>
+
     <div class="menu">
       <ul>
         <li>菜单1</li>
         <li>菜单2</li>
       </ul>
     </div>
+    <div class="toggle" @click="toggleAside"></div>
   </div>
 </template>
 
@@ -32,18 +36,32 @@ export default {
   justify-content: space-between;
   align-items:center;
   padding: 15px 20px;
-    .menu ul{
-        display: flex;
-        >li {
-            list-style: none;
-            margin-left: 20px;
-        }
-    }
+  position: relative;
+  .menu ul{
+      display: flex;
+      >li {
+          list-style: none;
+          margin-left: 20px;
+      }
+  }
+  .toggle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: red;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-8px);
+    display: none;
+  }
 
   @media (max-width: 500px){   // 页面宽度小于500px时隐藏菜单 并居中logo
       justify-content: center;
       >.menu {
           display: none;
+      }
+      > .toggle {
+        display: block;
       }
   }
 }

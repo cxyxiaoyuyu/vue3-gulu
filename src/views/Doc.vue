@@ -37,7 +37,7 @@ export default {
   aside {
     border: 1px solid red;
     padding: 20px 20px;
-    width: 220px;
+    width: 160px;
     text-align: left;
     ul {
       padding-top: 10px;
