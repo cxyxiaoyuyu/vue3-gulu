@@ -1,6 +1,6 @@
 <template>
   <div class="topNav">
-    <div class="logo">Logo</div>
+    <div class="logo" @click="toggleAside">Logo</div>
     <div class="menu">
       <ul>
         <li>菜单1</li>
@@ -10,8 +10,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { inject, Ref } from 'vue'
 export default {
+    setup(){
+        const asideVisible = inject<Ref<boolean>>('asideVisible')
+        console.log(asideVisible.value)
+        const toggleAside = () => {
+            asideVisible.value = !asideVisible.value
+        }
+        return {toggleAside}
+    }
 
 }
 </script>
@@ -30,5 +39,12 @@ export default {
             margin-left: 20px;
         }
     }
+
+  @media (max-width: 500px){   // 页面宽度小于500px时隐藏菜单 并居中logo
+      justify-content: center;
+      >.menu {
+          display: none;
+      }
+  }
 }
 </style>

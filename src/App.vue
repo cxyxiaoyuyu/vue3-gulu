@@ -2,13 +2,17 @@
   <router-view></router-view>
 </template>
 
-<script>
-import xiaoyu from './components/xiaoyu.vue'
+<script lang="ts">
+import { ref, provide, inject } from 'vue'
 
 export default {
   name: 'App',
+  setup(){
+    const asideVisible = ref(false)
+    provide('asideVisible',asideVisible)
+  },
   components: {
-    xiaoyu
+    
   }
 }
 </script>
