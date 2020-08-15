@@ -10,7 +10,7 @@ export default {
   props:['value'],
   setup(props,context){
     const toggleCheck = () => {
-      context.emit('input',!props.value)
+      context.emit('update:value',!props.value)
     }
     return {toggleCheck}
   }

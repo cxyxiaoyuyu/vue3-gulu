@@ -1,12 +1,11 @@
 <template>
   Switch Demo
-  <Switch :value="status" @input="status=$event" />
-
+  <Switch v-model:value="status" />
 </template>
 
 <script lang="ts">
-import Switch from '../lib/Switch.vue'
 import { ref } from 'vue'
+import Switch from '../lib/Switch.vue'
 export default {
   setup(){
     const status = ref(false)
