@@ -37,6 +37,7 @@ export default {
       position: absolute;
       top: 2px;
       left: 2px;
+      transition: left 250ms;
     }
     &.checked {
       background: blue;
