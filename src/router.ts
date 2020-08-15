@@ -3,7 +3,7 @@ import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
 
 import Button from './components/Button.vue'
-import Switch from './components/Switch.vue'
+import SwitchDemo from './components/SwitchDemo.vue'
 import Slide from './components/Slide.vue'
 import Tabs from './components/Tabs.vue'
 import Dialog from './components/Dialog.vue'
@@ -17,7 +17,7 @@ const router = createRouter({
         {path: '/doc', component: Doc,children:[
             {path: '', component: DocComponent},
             {path: 'button', component: Button},
-            {path: 'switch', component: Switch},
+            {path: 'switch', component: SwitchDemo},
             {path: 'slide', component: Slide},
             {path: 'dialog', component: Dialog},
             {path: 'tabs', component: Tabs},
