@@ -1,5 +1,5 @@
 <template>
-  <button :class="['gulu-button',`theme-${theme}`]">
+  <button :class="['gulu-button',`gulu-theme-${theme}`]">
       <slot />
   </button>
 </template>
@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $blue: #40a9ff;
 $color: #333;
