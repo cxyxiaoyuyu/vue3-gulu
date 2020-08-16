@@ -15,11 +15,16 @@
 
    <div class="block">size: big normal small 默认为normal</div>
    <div class="row">
-      <Button></Button>
+      <Button size="big">大 Button</Button>
+      <Button size="big" theme="primary">大 Button</Button>
+      <Button>中 Button</Button>
+      <Button theme="success">中 Button</Button>
+      <Button size="mini">小 Button</Button>
+      <Button size="mini" theme="warning">小Button</Button>
    </div>
 
-   <div>支持disabled</div>
-   <div>支持加载动画</div>
+   <div class="block">支持disabled</div>
+   <div class="block">支持加载动画</div>
 
  </div>
   

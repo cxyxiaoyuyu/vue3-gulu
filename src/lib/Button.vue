@@ -1,5 +1,5 @@
 <template>
-  <button :class="['gulu-button',`gulu-theme-${theme}`]">
+  <button :class="['gulu-button',`gulu-theme-${theme}`,`gulu-size-${size}`]">
       <slot />
   </button>
 </template>
@@ -10,6 +10,10 @@ export default {
         theme: {
             type: String,
             default: 'button'
+        },
+        size: {
+            type: String,
+            default: 'normal'
         }
     }
 }
@@ -73,6 +77,16 @@ $border-color: #d9d9d9;
             background: #ebb563;
             border-color: #ebb563;
         }
+    }
+    &.gulu-size-big {
+        height: 38px;
+        padding: 0 18px;
+        font-size: 16px;
+    }
+    &.gulu-size-mini {
+        height: 28px;
+        padding: 0 10px;
+        font-size: 12px;
     }
 }
 </style>
