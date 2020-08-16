@@ -1,6 +1,6 @@
 <template>
   Switch Demo
-  <Switch v-model:value="status" />
+  <Switch v-model:value="status" checked-text="启用" unchecked-text="禁用" />
 </template>
 
 <script lang="ts">
